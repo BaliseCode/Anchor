@@ -10,5 +10,6 @@
         "post-root-package-install": [
             "npm install"
         ]
-    }
+    },
+    "minimum-stability": "stable",
 }
