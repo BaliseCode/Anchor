@@ -16,7 +16,7 @@
             "mkdir app/content/taxonomy",
             "mkdir app/js",
             "mkdir app/views",
-            "mkdir app/includes",
+            "mkdir app/includes"
         ]
     },
     "minimum-stability": "stable",
