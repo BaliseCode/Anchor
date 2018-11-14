@@ -1,0 +1,11 @@
+{
+    "require": {
+        "windwalker/renderer": "~3.0",
+        "illuminate/view" : "4.*"
+    },
+    "scripts": {
+      "post-root-package-install": [
+        "npm install"
+      ]
+    }
+}

@@ -1,0 +1,2 @@
+<?php
+BaliseAnchor::render();
