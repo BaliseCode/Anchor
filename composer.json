@@ -1,11 +1,14 @@
 {
+    "name": "balise/Anchor",
+    "description": "A Wordpress Boilerplate",
+    "type": "theme",
     "require": {
         "windwalker/renderer": "~3.0",
         "illuminate/view" : "4.*"
     },
     "scripts": {
-      "post-root-package-install": [
-        "npm install"
-      ]
+        "post-root-package-install": [
+            "npm install"
+        ]
     }
 }
