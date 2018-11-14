@@ -1,7 +1,7 @@
 {
     "name": "balise/anchor",
     "description": "A Wordpress Boilerplate",
-    "type": "theme",
+    "type": "project",
     "require": {
         "windwalker/renderer": "~3.0",
         "illuminate/view" : "4.*"
