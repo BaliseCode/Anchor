@@ -12,6 +12,8 @@
         ]
     },
     "minimum-stability": "stable",
+    "prefer-stable": true,
+    "prefer-lowest": false,
     "license": "MIT",
-"homepage": "https://balise.ca"
+    "homepage": "https://balise.ca"
 }
