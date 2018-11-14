@@ -2,9 +2,6 @@
 Anchor is a Wordpress theme
 
 ## Getting Started
-To [x]
-
-* Install n sjh sdjfhsdfh jshd jhjsdfh jsdfh jsdjfhsd hjfsdjfhsdg fjdsg jdgh jsdghf jsdfgh jsdhg sdjfgh sjdfgh sdfgh sjdfghsdjfhg sdjfg sdjhgf sdjfhg sdjfhg sdfg
 
 ## Theme structure
 
