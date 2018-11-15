@@ -3,8 +3,6 @@
     "description": "A Wordpress Boilerplate",
     "type": "project",
     "require": {
-        "windwalker/renderer": "~3.0",
-        "illuminate/view" : "4.*",
         "balise/anchor-framework": "*"
     },
     "scripts": {
