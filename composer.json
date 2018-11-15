@@ -8,7 +8,23 @@
     "scripts": {
         "post-root-package-install": [
             "npm install",
-            "mkdir public"
+            "mkdir app/content",
+            "mkdir app/content/fields",
+            "mkdir app/content/navigations",
+            "mkdir app/content/posttypes",
+            "mkdir app/content/taxonomies",
+            "mkdir app/includes",
+            "mkdir app/js",
+            "mkdir app/css",
+            "mkdir app/less",
+            "mkdir app/scss",
+            "mkdir app/views",
+            "mkdir components",
+            "mkdir public",
+            "mkdir public/css",
+            "mkdir public/editor",
+            "mkdir public/js",
+            "mkdir public/views"
         ]
     },
     "minimum-stability": "stable",

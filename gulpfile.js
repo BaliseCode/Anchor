@@ -95,9 +95,6 @@ if (fs.existsSync('public/js/script.js')) {
 }
 
 let message = `<?php
-// LOAD THE BASEMENT WRAPPER
-include('framework/anchor/Anchor.php');
-
 // LOAD COMPOSER AUTO LOADER
 include('vendor/autoload.php');
 
