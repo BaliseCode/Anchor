@@ -10,6 +10,7 @@
     "scripts": {
         "post-root-package-install": [
             "npm install",
+            "mkdir public"
         ]
     },
     "minimum-stability": "stable",
