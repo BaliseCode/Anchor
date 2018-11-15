@@ -4,19 +4,12 @@
     "type": "project",
     "require": {
         "windwalker/renderer": "~3.0",
-        "illuminate/view" : "4.*"
+        "illuminate/view" : "4.*",
+        "balise/anchor-framework": "*"
     },
     "scripts": {
         "post-root-package-install": [
             "npm install",
-            "mkdir public/views",
-            "mkdir app/content/fields",
-            "mkdir app/content/navigation",
-            "mkdir app/content/post-type",
-            "mkdir app/content/taxonomy",
-            "mkdir app/js",
-            "mkdir app/views",
-            "mkdir app/includes"
         ]
     },
     "minimum-stability": "stable",
