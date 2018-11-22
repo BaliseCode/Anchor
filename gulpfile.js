@@ -24,6 +24,12 @@ let message = `<?php
 // LOAD COMPOSER AUTO LOADER
 include('vendor/autoload.php');
 
+// LOAD EVERYTHING IN content
+$files=glob(__DIR__."/app/content/*.php");
+foreach ($files as $file) {
+    require_once($file);
+}
+
 // LOAD SCRIPT AND STYLE
 add_action( 'wp_enqueue_scripts', function(){
     if (!is_admin()) {
