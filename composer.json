@@ -7,9 +7,6 @@
         "balise/firstmate": "dev-master"
     },
     "scripts": {
-        "post-root-package-install": [
-            "npm install",
-        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
