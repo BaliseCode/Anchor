@@ -19,6 +19,7 @@ if (fs.existsSync('public/js/script.js')) {
 let message = `<?php
 // LOAD COMPOSER AUTO LOADER
 include('vendor/autoload.php');
+Balise\\AnchorFramework\\Anchor::Init();
 
 // LOAD EVERYTHING IN content
 $files=glob(__DIR__."/app/content/*.php");
