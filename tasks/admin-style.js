@@ -10,6 +10,7 @@ gulp.task('admin-style', function () {
     let sassFilter = filter(['**/*.scss', '**/*.sass'], { restore: true })
     let lessFilter = filter(['**/*.less'], { restore: true })
     return gulp.src([
+
         'public/fonts/dashicons.css',
         'components/**/admin.css',
         'components/**/admin.scss',
