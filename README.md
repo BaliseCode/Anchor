@@ -50,10 +50,12 @@ Javascript assets are compiled with Gulp (https://gulpjs.com). This supports Rea
 ### LESS, SCSS, SASS and CSS packaging
 Stylesheet assets are compiled with Gulp (https://gulpjs.com). Use the css compiler you want for styling. We support LESS, SASS or plain old CSS. 
 
-*PUBLIC STYLES*
+#### PUBLIC STYLES
+
 The Gulp file will compile main.scss, main.css, and main.less into a single file main.css file which will be enqueued into the frontend part of your site.
 
-*ADMIN STYLES*
+#### ADMIN STYLES
+
 It will also take any admin.css, admin.scss and admin.less and compile them into a single admin.css file which will be enqueued into the backend part of your site.
 
 
