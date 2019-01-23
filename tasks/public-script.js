@@ -4,7 +4,7 @@ const webpack = require('webpack-stream');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // BUILD COMPONENTS
-gulp.task('gutenberg', function () {
+gulp.task('public-script', function () {
     return gulp.src(['app/js/*.js*','app/js/*.js','components/**/public.js*','components/**/*.public.js*'])
         .pipe(webpack({
             mode: 'production',
@@ -45,7 +45,6 @@ gulp.task('gutenberg', function () {
         })).on('error', function (error) {
             this.emit('end');
         })
-        .pipe(minifyjs()).on('error', function (error) {})
     .pipe(concat('script.js')).on('error', function (error) {})
         .pipe(gulp.dest('public/js/')).on('error', function (error) {})
 });
