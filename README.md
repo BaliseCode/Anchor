@@ -1,5 +1,5 @@
 # Anchor, a Wordpress Theme Boilerplate
-Anchor is a Wordpress theme boilerplate made to simplify your theme creation workflow
+Anchor is a Wordpress theme boilerplate made to simplify your theme creation workflow. It uses Anchor-Framework as a dependency so that it can be updated for existing projects
 
 ## Getting Started
 
