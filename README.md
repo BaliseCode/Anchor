@@ -23,18 +23,18 @@ npm start
 - Blade support for templating
 
 - Javascript Packaging
--- Vue.JS support
--- React support
+  - Vue.JS support
+  - React support
 
 - Gutenberg Ready
--- Compilation for Gutenberg blocks
+  - Compilation for Gutenberg blocks
 
 - LESS, SCSS, SASS and CSS packaging
 
 - Graphics
--- Image minification
--- IconFont creation
--- Possibility to add custom dashicons 
+  - Image minification
+  - IconFont creation
+  - Possibility to add custom dashicons 
 
 - Auto includes for PHP files
 
