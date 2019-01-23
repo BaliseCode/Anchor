@@ -16,13 +16,13 @@ gulp.task('watcher', () => {
 
     // Public Elements
     gulp.watch('app/**/*.js*', gulp.series(gulp.parallel('public-script'), 'autoloader'));
-    gulp.watch('app/**/*.ss*', gulp.series(gulp.parallel('public-style'), 'autoloader'));
+    gulp.watch('app/**/*.ss*', gulp.series(gulp.parallel('public-style'), 'autoloader')); /** */
     
     // Gutenberg Elements
     gulp.watch('components/**/*public.js*', gulp.series(gulp.parallel('public-script'), 'autoloader'));
     gulp.watch('components/**/*.js*', gulp.series(gulp.parallel('gutenberg'), 'autoloader'));
     gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('public-style'), 'autoloader'));
-    gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('admin-style'), 'autoloader'));
+    gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('admin-style'), 'autoloader'));  /** */
     
     // Autoloader for PHP
     gulp.watch(['app/**/*.php'], gulp.parallel('autoloader'));
@@ -39,7 +39,6 @@ gulp.task('default', gulp.series(
         'images',
         'admin-style',
         'public-style',
-        'admin-script',
         'public-script'
     ]),
     'autoloader'
