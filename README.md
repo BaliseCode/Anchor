@@ -1,5 +1,5 @@
 # Anchor, a Wordpress Theme Boilerplate
-Anchor is a Wordpress theme boilerplate made to simplify your theme creation workflow. It uses Anchor-Framework as a dependency so that it can be updated for existing projects
+Anchor is a Wordpress theme boilerplate made to simplify your theme creation workflow. It uses Anchor-Framework as a dependency so that it can be updated for existing projects.
 
 ## Getting Started
 
@@ -39,10 +39,12 @@ npm start
 - Auto includes for PHP files
 
 ### Blade support
-Anchor supports Blade templating language as a replacement for Wordpress PHP file structure. The Blade file structure use the exact same hierarchy as Wordpress does (https://wphierarchy.com/) with 2 exceptions
+Anchor (from Anchor framework) supports Blade templating language as a replacement for Wordpress PHP file structure. The Blade file structure use the exact same hierarchy as Wordpress does (https://wphierarchy.com/) with 2 exceptions
 
 1) Anchor will fetch app/views and subfolder with no fetch limitation (whereas Wordpress only look 1 level ahead)
 2) Anchor will consider posttype/single.blade.php as a replacement for /single-posttype.blade.php and posttype/archive.blade.php /archive-posttype.blade.php for a cleaner folder structure
+
+The current version of Blade is 5.
 
 ### Javascript Packaging
 Javascript assets are compiled with Gulp (https://gulpjs.com). This supports React and Vue so you can choose you favorite Framework
