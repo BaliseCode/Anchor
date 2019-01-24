@@ -20,7 +20,9 @@ gulp.task('admin-style', function () {
         'app/**/admin.sass',
         'app/**/admin.less',
         'app/**/admin.css'
-    ])
+    ], {
+        allowEmpty: true
+    })
         .pipe(sassFilter).pipe(sass()).on('error', function (error) {
             // we have an error
             done(error);

@@ -18,7 +18,9 @@ gulp.task('public-style', function () {
         'components/**/public.scss',
         'components/**/public.sass',
         'components/**/public.less'
-    ])
+    ], {
+        allowEmpty: true
+    })
         .pipe(sassFilter).pipe(sass()).on('error', function (error) {
         }).pipe(sassFilter.restore)
         .pipe(lessFilter).pipe(less()).on('error', function (error) {
