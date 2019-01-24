@@ -11,6 +11,7 @@ To create a new project go into your CLI (Terminal, Powershell, etc) and type
 
 ```bash
 composer create-project your_project_name
+cd your_project_name
 npm install
 ``` 
 To compile your assets type 
