@@ -23,13 +23,15 @@ i[class^="icon-"], i[class*=" icon-"] {
     font-weight: normal;
     font-variant: normal; 
     text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
-}
+     margin-top: -0.3em;   
+}  
+
 `;
 
-gulp.task('iconfont', function () {
+gulp.task('iconfont', function () { 
     return gulp.src(['app/graphics/icons/*.svg'])
         .pipe(iconfont({
             fontName: 'iconfont', // required
