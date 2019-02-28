@@ -20,20 +20,23 @@ if (fs.existsSync('public/js/script.js')) {
 
 let message = `<?php
 // LOAD COMPOSER AUTO LOADER
-include('vendor/autoload.php'); 
+include('includes/composer_modules/autoload.php'); 
 Balise\\AnchorFramework\\Anchor::Init();
 
 // LOAD EVERYTHING IN CONTENT FOLDER
-$files=glob(__DIR__."/app/content/*/*.php");
+
+add_action( 'init', function() {
+    $files=glob(__DIR__."/app/content/*/*.php");
 foreach ($files as $file) { 
     require_once($file);
 } 
+} );
 
 // STYLES AND SCRIPTS
 add_action( 'wp_enqueue_scripts', function(){
     if (!is_admin()) {
         wp_enqueue_style('main-style',  get_stylesheet_directory_uri().'/public/css/style.css', array(), '${md5Style}', 'all');
-        wp_enqueue_script('main-script',  get_stylesheet_directory_uri().'/public/js/script.js', array(), '${md5Script}', true );
+        wp_enqueue_script('main-script',  get_stylesheet_directory_uri().'/public/js/script.js', array('wp-i18n'), '${md5Script}', true );
     }
 });
 
