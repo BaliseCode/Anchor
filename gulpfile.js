@@ -21,8 +21,7 @@ gulp.task('watcher', () => {
     // Gutenberg Elements
     gulp.watch('components/**/*public.js*', gulp.series(gulp.parallel('public-script'), 'autoloader'));
     gulp.watch('components/**/*.js*', gulp.series(gulp.parallel('gutenberg'), 'autoloader'));
-    gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('public-style'), 'autoloader'));
-    gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('admin-style'), 'autoloader'));  /** */
+    gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('admin-style', 'public-style'), 'autoloader'));
     
     // Autoloader for PHP
     gulp.watch(['app/**/*.php'], gulp.parallel('autoloader'));
