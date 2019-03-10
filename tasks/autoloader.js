@@ -20,7 +20,7 @@ if (fs.existsSync('public/js/script.js')) {
 
 let message = `<?php
 // LOAD COMPOSER AUTO LOADER
-include('includes/composer_modules/autoload.php'); 
+include('vendor/autoload.php'); 
 Balise\\AnchorFramework\\Anchor::Init();
 
 // LOAD EVERYTHING IN CONTENT FOLDER
