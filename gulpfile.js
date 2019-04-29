@@ -7,7 +7,14 @@ var HubRegistry = require('gulp-hub');
 gulp.registry(new HubRegistry(['tasks/*.js']));
 
 // START
-
+const setProduction =(e) => {
+    global.WebPackMode = global.WebPackMode || "production"
+    return Promise.resolve('the value is ignored');
+}
+const setDeveloppement =(e) => {
+    global.WebPackMode = global.WebPackMode || 'development'
+    return Promise.resolve('the value is ignored');
+}
 gulp.task('watcher', () => {
     // Graphic tasks
     gulp.watch('app/graphics/icons/*.svg', gulp.series(gulp.parallel('iconfont'), gulp.parallel('public-style'), 'autoloader'));
@@ -15,21 +22,23 @@ gulp.task('watcher', () => {
     gulp.watch('app/graphics/images/*', gulp.series(gulp.parallel('images'), gulp.parallel('public-style'), 'autoloader'));
 
     // Public Elements
+    gulp.watch('app/**/*.vue', gulp.series(gulp.parallel('public-script'), 'autoloader'));
     gulp.watch('app/**/*.js*', gulp.series(gulp.parallel('public-script'), 'autoloader'));
-    gulp.watch('app/**/*.ss*', gulp.series(gulp.parallel('public-style'), 'autoloader')); /** */
-    
+    gulp.watch('app/**/*.*ss', gulp.series(gulp.parallel('admin-style', 'public-style'), 'autoloader')); /** */
+
     // Gutenberg Elements
     gulp.watch('components/**/*public.js*', gulp.series(gulp.parallel('public-script'), 'autoloader'));
     gulp.watch('components/**/*.js*', gulp.series(gulp.parallel('gutenberg'), 'autoloader'));
     gulp.watch('components/**/*.*ss', gulp.series(gulp.parallel('admin-style', 'public-style'), 'autoloader'));
-    
+
     // Autoloader for PHP
     gulp.watch(['app/**/*.php'], gulp.parallel('autoloader'));
 });
-gulp.task('watch', gulp.series('default', 'watcher'));
+gulp.task('watch', gulp.series(setDeveloppement, 'default',  'watcher'));
 
 
 gulp.task('default', gulp.series(
+    setProduction,
     gulp.parallel([
         'iconfont',
         'dashicons'
