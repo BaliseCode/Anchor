@@ -9,7 +9,7 @@ gulp.task('public-script', function () {
         allowEmpty: true
     })
         .pipe(webpack({
-            mode: 'production',
+            mode: global.WebPackMode || 'development',
             resolve: {
                 alias: {
                     'vue$': 'vue/dist/vue.esm.js'
@@ -17,18 +17,18 @@ gulp.task('public-script', function () {
             },
             module: {
                 rules: [{
-                    test: /\.m?jsx?$/, 
+                    test: /\.m?jsx?$/,
                         exclude: /(node_modules|bower_components)/,
                         use: {
                             loader: 'babel-loader',
                             options: {
                                 "presets": [
-                                    "@babel/preset-react", 
+                                    "@babel/preset-react",
                                     "@babel/preset-env"
                                 ],
                             },
                         }
-                    }, 
+                    },
                     {
                         test: /\.vue$/,
                         exclude: /(node_modules|bower_components|public|task|vendor)/,
@@ -36,12 +36,12 @@ gulp.task('public-script', function () {
                             loader: 'vue-loader',
                             options: {
                                 compilerWhitespace: false
-                            } 
+                            }
                         }
                     }
                 ]
             },
-            plugins: [
+            plugins: [ 
                 new VueLoaderPlugin()
             ]
         })).on('error', function (error) {
