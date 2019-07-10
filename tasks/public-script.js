@@ -9,39 +9,33 @@ gulp.task('public-script', function () {
         allowEmpty: true
     })
         .pipe(webpack({
-            mode: global.WebPackMode || 'development',
+            mode: 'development',
             resolve: {
                 alias: {
                     'vue$': 'vue/dist/vue.esm.js'
                 }
             },
             module: {
-                rules: [{
-                    test: /\.m?jsx?$/,
+                rules: [
+                    {
+                        test: /\.vue$/,
+                        loader: 'vue-loader'
+                    },{ 
+                        test: /\.m?jsx?$/, 
                         exclude: /(node_modules|bower_components)/,
                         use: {
                             loader: 'babel-loader',
                             options: {
                                 "presets": [
-                                    "@babel/preset-react",
+                                    "@babel/preset-react", 
                                     "@babel/preset-env"
                                 ],
                             },
                         }
-                    },
-                    {
-                        test: /\.vue$/,
-                        exclude: /(node_modules|bower_components|public|task|vendor)/,
-                        use: {
-                            loader: 'vue-loader',
-                            options: {
-                                compilerWhitespace: false
-                            }
-                        }
                     }
                 ]
             },
-            plugins: [ 
+            plugins: [
                 new VueLoaderPlugin()
             ]
         })).on('error', function (error) {
