@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 var HubRegistry = require('gulp-hub');
+var dotenv = require('dotenv');
+var browserSync = require('browser-sync').create();
 
 /* tell gulp to use the tasks just loaded */
 gulp.registry(new HubRegistry(['tasks/*.js']));
@@ -34,8 +36,7 @@ gulp.task('watcher', () => {
     // Autoloader for PHP
     gulp.watch(['app/**/*.php'], gulp.parallel('autoloader'));
 });
-gulp.task('watch', gulp.series(setDeveloppement, 'default',  'watcher'));
-
+gulp.task('watch', gulp.series(setDeveloppement, 'default', gulp.parallel('browsersync', 'watcher')));
 
 gulp.task('default', gulp.series(
     setProduction,
@@ -51,3 +52,21 @@ gulp.task('default', gulp.series(
     ]),
     'autoloader'
 ));
+
+
+gulp.task('browsersync', () => {
+    const env = dotenv.config()
+    if (!process.env.WP_HOME) {
+        //require('dotenv').config({ path: __dirname+'/../../../..' })
+    }
+    if (process.env.WP_HOME) {
+        let files = [
+            './app/**/*.php',
+            './app/*.php',
+            './public/**/*.*'
+        ];
+        browserSync.init(files, {
+            proxy: process.env.WP_HOME
+        });
+    }
+})
