@@ -41,7 +41,7 @@ gulp.task('iconfont', function () {
             formats: ['ttf', 'eot', 'woff', "svg"], // default, 'woff2' and 'svg' are available
             timestamp: runTimestamp, // recommended to get consistent builds when watching files
         })).on('glyphs', function (glyphs, options) {
-            let string = iconfontTemplate.replace('%random%', runTimestamp) + glyphs.map(g => {
+            let string = iconfontTemplate.replace(/%random%/g, runTimestamp) + glyphs.map(g => {
                 return `i.icon-${g.name}:before{content:'\\${g.unicode[0].charCodeAt(0).toString(16).toLowerCase()}'}`
             }).join('')
             fs.writeFile('public/fonts/iconfont.css', string, function () { })
