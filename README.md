@@ -10,7 +10,7 @@ You have to get composer and node to start.
 To create a new project go into your CLI (Terminal, Powershell, etc) and type
 
 ```bash
-composer create-project your_project_name
+composer create-project balise/anchor your_project_name
 cd your_project_name
 npm install
 ``` 
