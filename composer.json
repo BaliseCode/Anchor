@@ -3,7 +3,7 @@
     "description": "A Wordpress Boilerplate",
     "type": "project",
     "require": {
-        "balise/anchor-framework": "dev-master",
+        "balise/anchor-framework": "2.0",
         "balise/firstmate": "dev-master"
     },
     "scripts": {
