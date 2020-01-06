@@ -35,7 +35,7 @@ gulp.task('iconfont', function () {
     return gulp.src(['app/graphics/icons/*.svg'])
         .pipe(iconfont({
             fontName: 'iconfont', // required
-            prependUnicode: false, // recommended option
+            prependUnicode: true, // recommended option
             normalize: true,
             fontHeight: 1001,
             formats: ['ttf', 'eot', 'woff', "svg"], // default, 'woff2' and 'svg' are available

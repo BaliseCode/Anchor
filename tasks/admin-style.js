@@ -11,10 +11,10 @@ gulp.task('admin-style', function () {
     return gulp.src([
 
         'public/fonts/dashicons.css',
-        'components/**/admin.css',
-        'components/**/admin.scss',
-        'components/**/admin.sass',
-        'components/**/admin.less',
+        'app/components/**/admin.css',
+        'app/components/**/admin.scss',
+        'app/components/**/admin.sass',
+        'app/components/**/admin.less',
         'app/**/admin.scss',
         'app/**/admin.sass',
         'app/**/admin.less',
@@ -26,5 +26,5 @@ gulp.task('admin-style', function () {
         .pipe(lessFilter).pipe(less()).pipe(lessFilter.restore)
         .pipe(concat('admin.css'))
         .pipe(crass({ pretty: false }))
-        .pipe(gulp.dest('public/editor'))
+        .pipe(gulp.dest('public/css'))
 });

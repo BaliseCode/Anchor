@@ -4,7 +4,7 @@ const webpack = require('webpack-stream');
 
 // BUILD COMPONENTS
 gulp.task('gutenberg', function () {
-    return gulp.src('./components/**/block.js*', './components/**/*.block.js*') 
+    return gulp.src('.app/components/**/block.js*', './app/components/**/*.block.js*') 
         .pipe(webpack({
             mode: 'production',
             resolve: {

@@ -5,7 +5,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // BUILD COMPONENTS
 gulp.task('public-script', function () {
-    return gulp.src(['app/js/*.js*', 'app/js/*.js', 'components/**/public.js*', 'components/**/*.public.js*'], {
+    return gulp.src(['app/js/*.js*', 'app/js/*.js', 'app/components/**/public.js*', 'app/components/**/*.public.js*'], {
         allowEmpty: true
     })
         .pipe(webpack({
@@ -41,6 +41,6 @@ gulp.task('public-script', function () {
         })).on('error', function (error) {
             this.emit('end');
         })
-    .pipe(concat('script.js')).on('error', function (error) {})
+    .pipe(concat('public.js')).on('error', function (error) {})
         .pipe(gulp.dest('public/js/')).on('error', function (error) {})
 });
