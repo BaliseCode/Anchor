@@ -20,7 +20,7 @@
         "gulp": "^4.0.0",
         "gulp-babel": "^8.0.0",
         "gulp-concat": "^2.6.1",
-        "gulp-crass": "^0.2.2",
+        "gulp-css-condense": "^1.1.2",
         "gulp-filter": "^5.1.0",
         "gulp-hub": "^4.2.0",
         "gulp-iconfont": "^10.0.2",
