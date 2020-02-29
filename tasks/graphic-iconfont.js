@@ -33,7 +33,7 @@ i[class^="icon-"], i[class*=" icon-"] {
 
 gulp.task('iconfont', function () { 
     return gulp.src(['app/graphics/icons/*.svg'])
-        .pipe(iconfont({
+        .pipe(iconfont({  
             fontName: 'iconfont', // required
             prependUnicode: true, // recommended option
             normalize: true,
