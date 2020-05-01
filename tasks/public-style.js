@@ -3,7 +3,7 @@ const concat = require('gulp-concat');
 const filter = require('gulp-filter');
 const sass = require('gulp-sass');
 const less = require('gulp-less');
-const crass = require('gulp-crass');
+const cssc = require('gulp-css-condense');
 const sort = require('gulp-sort');
 
 
@@ -66,8 +66,10 @@ gulp.task('public-style', function () {
         .pipe(lessFilter.restore)
 
         .pipe(concat('public.css'))
-        .pipe(crass({
-            pretty: false
+        .pipe(cssc({
+            consolidateViaDeclarations: true,
+            consolidateViaSelectors: false,
+            consolidateMediaQueries: true
         }))
         .pipe(gulp.dest('public/css'))
 });
