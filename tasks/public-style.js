@@ -20,6 +20,14 @@ gulp.task('public-style', function () {
     })
     return gulp.src([
             'app/scss/main.scss',
+            'app/public.css',
+            'app/public.scss',
+            'app/public.less',
+            'app/public.sass',
+            'app/**/public.css',
+            'app/**/public.scss',
+            'app/**/public.less',
+            'app/**/public.sass',
             'app/*.public.css',
             'app/*.public.scss',
             'app/*.public.less',
@@ -28,6 +36,14 @@ gulp.task('public-style', function () {
             'app/**/*.public.scss',
             'app/**/*.public.less',
             'app/**/*.public.sass',
+            'app/*.public.*.css',
+            'app/*.public.*.scss',
+            'app/*.public.*.less',
+            'app/*.public.*.sass',
+            'app/**/*.public.*.css',
+            'app/**/*.public.*.scss',
+            'app/**/*.public.*.less',
+            'app/**/*.public.*.sass',
             'public/fonts/iconfont.css',
         ], {
             allowEmpty: true

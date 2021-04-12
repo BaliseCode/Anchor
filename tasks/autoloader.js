@@ -13,7 +13,7 @@ if (fs.existsSync('public/css/public.css')) {
 }
 if (fs.existsSync('public/css/admin.css')) {
     adminStyle = `
-        wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/public/js/admin.css', array(), '${md5File.sync('public/css/admin.css')}', 'all');`
+        wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/public/css/admin.css', array(), '${md5File.sync('public/css/admin.css')}', 'all');`
 }
 if (fs.existsSync('public/js/public.js')) {
     publicScript = `

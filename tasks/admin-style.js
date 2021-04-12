@@ -11,14 +11,30 @@ gulp.task('admin-style', function () {
     return gulp.src([
 
         'public/fonts/dashicons.css',
-        'app/components/**/admin.css',
-        'app/components/**/admin.scss',
-        'app/components/**/admin.sass',
-        'app/components/**/admin.less',
+        'app/admin.css',
+        'app/admin.scss',
+        'app/admin.less',
+        'app/admin.sass',
+        'app/**/admin.css',
         'app/**/admin.scss',
-        'app/**/admin.sass',
         'app/**/admin.less',
-        'app/**/admin.css'
+        'app/**/admin.sass',
+        'app/*.admin.css',
+        'app/*.admin.scss',
+        'app/*.admin.less',
+        'app/*.admin.sass',
+        'app/**/*.admin.css',
+        'app/**/*.admin.scss',
+        'app/**/*.admin.less',
+        'app/**/*.admin.sass',
+        'app/*.admin.*.css',
+        'app/*.admin.*.scss',
+        'app/*.admin.*.less',
+        'app/*.admin.*.sass',
+        'app/**/*.admin.*.css',
+        'app/**/*.admin.*.scss',
+        'app/**/*.admin.*.less',
+        'app/**/*.admin.*.sass',
     ], {
         allowEmpty: true
     })
@@ -26,5 +42,5 @@ gulp.task('admin-style', function () {
         .pipe(lessFilter).pipe(less()).pipe(lessFilter.restore)
         .pipe(concat('admin.css'))
         .pipe(crass({ pretty: false }))
-        .pipe(gulp.dest('public/css'))
+        .pipe(gulp.dest('public/css'))  
 });
