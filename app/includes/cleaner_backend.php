@@ -1,5 +1,6 @@
 <?php
-class CleanerBackEnd
+
+class CleanerBackend
 {
     private $menu = array();
     private $submenu = array();
@@ -120,7 +121,7 @@ class CleanerBackEnd
         <h1 class="wp-heading-inline">Mode</h1>
         <form method="post" action="options.php" style="max-width: 700px;">
             <?php
-            settings_fields('_BaseFloorMenuContent');
+            settings_fields('_CleanerBackend');
             $this->optionsRemoveMenuItems = get_option('removeMenuItem');
             $this->optionsRemoveComments = get_option('removeComments');
             ?>
@@ -177,11 +178,11 @@ class CleanerBackEnd
     public function catchDevSettings()
     {
         register_setting(
-            '_BaseFloorMenuContent',
+            '_CleanerBackend',
             'removeMenuItem'
         );
         register_setting(
-            '_BaseFloorMenuContent',
+            '_CleanerBackend',
             'removeComments',
             array($this, 'sanitizeBool')
         );
@@ -192,4 +193,4 @@ class CleanerBackEnd
         return ($input) ? 1 : false;
     }
 }
-new CleanerBackEnd();
+new CleanerBackend();

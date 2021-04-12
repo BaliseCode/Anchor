@@ -35,13 +35,9 @@
         "webpack-stream": "^5.2.1"
     },
     "dependencies": {
-        "@fancyapps/fancybox": "^3.5.7",
-        "flickity": "^2.2.1",
         "flickity-fade": "^1.0.0",
         "gulp-crass": "^0.2.2",
         "gulp-sort": "^2.0.0",
-        "imagesloaded": "^4.1.4",
-        "infinite-scroll": "^3.0.6",
         "isotope-layout": "^3.0.6",
         "react": "^16.7.0",
         "react-dom": "^16.7.0",

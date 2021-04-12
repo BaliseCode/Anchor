@@ -13,7 +13,7 @@ if (fs.existsSync('public/css/public.css')) {
 }
 if (fs.existsSync('public/css/admin.css')) {
     adminStyle = `
-        wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/public/css/admin.css', array(), '${md5File.sync('public/css/admin.css')}', 'all');`
+        wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/public/js/admin.css', array(), '${md5File.sync('public/css/admin.css')}', 'all');`
 }
 if (fs.existsSync('public/js/public.js')) {
     publicScript = `
@@ -26,10 +26,8 @@ if (fs.existsSync('public/js/admin.js')) {
 
 let base = `<?php
 // LOAD COMPOSER AUTO LOADER
-include('vendor/autoload.php'); 
+@include('vendor/autoload.php'); 
 
-// INITIALISE ANCHOR
-Balise\\AnchorFramework\\Anchor::Init();  
 
 // ENQUEUE STYLES AND SCRIPTS
 add_action( 'wp_enqueue_scripts', function(){
@@ -73,7 +71,7 @@ gulp.task('autoloader', function () {
     let message = base; 
     return scanPath((item) => {
         return item.substr(item.length - 8) === ".inc.php"
-    }, 'app/includes', []).then((includes) => {
+    }, 'app/components', []).then((includes) => {
 
         message += "// FILES IN INCLUDE PATH\n";
         message += includes.map(inc => `include("${inc}");`).join("\n") + "\n"

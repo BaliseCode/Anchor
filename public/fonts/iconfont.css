@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'iconfont';
+    src:  url('../fonts/iconfont.eot?1612987623');
+    src:  url('../fonts/iconfont.eot?1612987623#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.ttf?1612987623') format('truetype'),
+    url('../fonts/iconfont.woff?1612987623') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+i[class^="icon-"], i[class*=" icon-"] {
+    font-family: 'iconfont' !important;
+    speak: none;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    font-variant: normal; 
+    text-transform: none;
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+     margin-top: -0.3em;   
+}  
+
+i.icon-envelope:before{content:'\ea01'}i.icon-facebook:before{content:'\ea02'}i.icon-map:before{content:'\ea03'}i.icon-telephone:before{content:'\ea04'}
