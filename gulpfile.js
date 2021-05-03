@@ -62,9 +62,9 @@ gulp.task('browsersync', () => {
     if (process.env.WP_HOME) {
         let files = [
             './app/**/*.php',
-            './*.php',
             './app/*.php',
-            './public/**/*.*'
+            './public/**/*.*',
+            './*.php'
         ];
         browserSync.init(files, {
             proxy: process.env.WP_HOME

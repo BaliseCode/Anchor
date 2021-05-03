@@ -74,7 +74,6 @@ gulp.task('autoloader', function () {
     }, 'app/components', []).then((includes) => {
 
         message += "// FILES IN INCLUDE PATH\n";
-        message += includes.map(inc => `include("${inc}");`).join("\n") + "\n"
     }).then(() => {
         return fs.readdir('app/includes', function (err, items) {
             includes = [];
